@@ -2,12 +2,21 @@ package org.bitcash.applications.marketplace.gui.login;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.stage.Stage;
 import org.bitcash.applications.marketplace.backend.login.AccountAuthManager;
+import org.bitcash.applications.marketplace.gui.Pages;
+import org.controlsfx.control.action.Action;
+
+import java.io.IOException;
 
 public class LoginController {
 
@@ -32,7 +41,7 @@ public class LoginController {
     @FXML
     private Label loginStatus;
 
-    public void login(ActionEvent e) {
+    public void login(ActionEvent e) throws IOException {
 
         Font font = Font.font(Font.getDefault().getName(),FontWeight.BOLD,Font.getDefault().getSize());
         loginStatus.setFont(font);
@@ -43,6 +52,7 @@ public class LoginController {
 
             loginStatus.setTextFill(Color.LIMEGREEN);
             loginStatus.setText("Logged in successfully!");
+            Pages.switchScene("homepage.fxml",e);
         } else {
 
             loginStatus.setTextFill(Color.DARKRED);
@@ -73,7 +83,6 @@ public class LoginController {
         }
 
         loginStatus.setVisible(true);
-
 
     }
 
