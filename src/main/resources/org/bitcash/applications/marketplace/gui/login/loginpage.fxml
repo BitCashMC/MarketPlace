@@ -20,7 +20,7 @@
          <children>
             <Pane fx:id="header" prefHeight="72.0" prefWidth="661.0">
                <children>
-                  <Label fx:id="heading" layoutX="-1.0" layoutY="-1.0" prefHeight="72.0" prefWidth="661.0" text="IOREM IPSUM" />
+                  <Label fx:id="heading" layoutX="-1.0" layoutY="-1.0" prefHeight="72.0" prefWidth="661.0" text="MarketPlace" />
                </children>
             </Pane>
             <SplitPane fx:id="central_tile" dividerPositions="0.5" prefHeight="329.0" prefWidth="641.0">

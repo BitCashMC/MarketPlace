@@ -23,7 +23,7 @@ public class LoginMain extends Application {
         scene.getStylesheets().add(css);
 
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Iorem Ipsum");
+        primaryStage.setTitle("MarketPlace");
         primaryStage.show();
 
         SplitPane.Divider divider = controller.getCentralTile().getDividers().get(0);

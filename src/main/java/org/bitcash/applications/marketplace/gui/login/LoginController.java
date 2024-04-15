@@ -13,12 +13,15 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import org.bitcash.applications.marketplace.backend.login.AccountAuthManager;
-import org.bitcash.applications.marketplace.gui.Pages;
+import org.bitcash.applications.marketplace.gui.SceneManager;
+import org.bitcash.applications.marketplace.gui.home.HomeController;
 import org.controlsfx.control.action.Action;
 
 import java.io.IOException;
 
 public class LoginController {
+
+    public static ActionEvent event;
 
     @FXML
     private AnchorPane background;
@@ -43,6 +46,7 @@ public class LoginController {
 
     public void login(ActionEvent e) throws IOException {
 
+        event = e;
         Font font = Font.font(Font.getDefault().getName(),FontWeight.BOLD,Font.getDefault().getSize());
         loginStatus.setFont(font);
 
@@ -52,7 +56,7 @@ public class LoginController {
 
             loginStatus.setTextFill(Color.LIMEGREEN);
             loginStatus.setText("Logged in successfully!");
-            Pages.switchScene("homepage.fxml",e);
+            SceneManager.switchScene("homepage.fxml",e,new HomeController());
         } else {
 
             loginStatus.setTextFill(Color.DARKRED);

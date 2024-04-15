@@ -41,6 +41,7 @@ public class AccountAuthManager {
     //Method to create a new session and corresponding account
     public static boolean attemptRegister(String email, String password) {
 
+        if (email.isBlank() || password.isBlank()) return false;
         if (new File(PATH_TO_STORED_ACCOUNTS + email + ".ser").isFile()) return false;
 
         Session.setCurrentSession(new Session(new Account(email,password)));
