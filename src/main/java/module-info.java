@@ -4,7 +4,6 @@ module org.bitcash.applications.marketplace.marketplace {
 
     requires org.controlsfx.controls;
 
-    opens org.bitcash.applications.marketplace.gui.login to javafx.fxml;
-    exports org.bitcash.applications.marketplace.gui.login;
-    exports org.bitcash.applications.marketplace.gui.home;
+    exports org.bitcash.applications.marketplace.gui;
+    opens org.bitcash.applications.marketplace.gui to javafx.fxml;
 }

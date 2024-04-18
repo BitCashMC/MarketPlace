@@ -10,7 +10,7 @@ public class Account implements Serializable {
     private String password;
     private transient Session session;
 
-    public static final String PATH_TO_STORED_ACCOUNTS = "src/main/resources/org/bitcash/applications/marketplace/gui/login/accounts/";
+    public static final String STORED_ACCOUNTS = "src/main/resources/org/bitcash/applications/marketplace/gui/accounts/";
     private static final long serialVersionUID = ObjectStreamClass.lookup(Account.class).getSerialVersionUID();
 
     public Account(String email, String password) {
@@ -18,7 +18,7 @@ public class Account implements Serializable {
         this.password = password;
 
         try {
-            File file = new File(PATH_TO_STORED_ACCOUNTS + email + ".ser");
+            File file = new File(STORED_ACCOUNTS + email + ".ser");
             file.createNewFile();
             FileOutputStream fileOut = new FileOutputStream(file);
             ObjectOutputStream out = new ObjectOutputStream(fileOut);

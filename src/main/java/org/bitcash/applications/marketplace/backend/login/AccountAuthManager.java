@@ -6,7 +6,7 @@ import org.bitcash.applications.marketplace.backend.Session;
 import java.io.*;
 
 import static java.util.Arrays.stream;
-import static org.bitcash.applications.marketplace.backend.Account.PATH_TO_STORED_ACCOUNTS;
+import static org.bitcash.applications.marketplace.backend.Account.STORED_ACCOUNTS;
 
 public class AccountAuthManager {
 
@@ -15,7 +15,7 @@ public class AccountAuthManager {
         FileInputStream fileIn;
 
         try {
-            fileIn = new FileInputStream((PATH_TO_STORED_ACCOUNTS + email.toLowerCase()+".ser").trim());
+            fileIn = new FileInputStream((STORED_ACCOUNTS + email.toLowerCase()+".ser").trim());
         } catch (FileNotFoundException e) {
             System.err.println("Attempt by " + email + " to log in failed. No records found of an account under the provided address.");
             return false;
@@ -42,7 +42,7 @@ public class AccountAuthManager {
     public static boolean attemptRegister(String email, String password) {
 
         if (email.isBlank() || password.isBlank()) return false;
-        if (new File(PATH_TO_STORED_ACCOUNTS + email + ".ser").isFile()) return false;
+        if (new File(STORED_ACCOUNTS + email + ".ser").isFile()) return false;
 
         Session.setCurrentSession(new Session(new Account(email,password)));
         return true;

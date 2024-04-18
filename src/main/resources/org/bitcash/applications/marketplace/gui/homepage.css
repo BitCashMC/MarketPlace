@@ -1,0 +1,11 @@
+#title{
+-fx-font-size:30;
+-fx-text-fill:"white";
+-fx-font-family: "Arial";
+-fx-font-weight:bold;
+-fx-alignment:center;
+}
+
+#mainPanel{
+-fx-background-image: url("homepage-center-background.png");
+}
