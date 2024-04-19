@@ -34,6 +34,15 @@ public class LoginController {
     @FXML
     private Label loginStatus;
 
+    @FXML
+    public void initialize() {
+        this.login.setDefaultButton(true);
+        SplitPane.Divider divider = central_tile.getDividers().get(0);
+        divider.positionProperty().addListener((observable, oldvalue, newvalue) -> divider.setPosition(0.5));
+
+
+    }
+
     public void login(ActionEvent e) throws IOException {
 
         Font font = Font.font(Font.getDefault().getName(),FontWeight.BOLD,Font.getDefault().getSize());
@@ -45,7 +54,7 @@ public class LoginController {
 
             loginStatus.setTextFill(Color.LIMEGREEN);
             loginStatus.setText("Logged in successfully!");
-            PageManager.switchScene("homepage");
+            PageManager.switchScene("homepage",null);
         } else {
 
             loginStatus.setTextFill(Color.DARKRED);
@@ -79,10 +88,6 @@ public class LoginController {
 
     }
 
-    public SplitPane getCentralTile() {
-        return this.central_tile;
-    }
-
     public TextField getEmailInput() {
         return this.email_input;
     }
@@ -90,10 +95,5 @@ public class LoginController {
     public PasswordField getPasswordInput() {
         return this.password_input;
     }
-
-    public void setLoginAsDefaultButton(boolean status) {
-        this.login.setDefaultButton(status);
-    }
-
 
 }

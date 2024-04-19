@@ -1,5 +1,5 @@
 #title{
--fx-font-size:30;
+-fx-font-size:20;
 -fx-text-fill:"white";
 -fx-font-family: "Arial";
 -fx-font-weight:bold;
@@ -7,5 +7,46 @@
 }
 
 #mainPanel{
--fx-background-image: url("homepage-center-background.png");
+-fx-background-image: url("homepage-center-background.jpg");
+-fx-border-style:solid;
+-fx-border-color:"gainsboro";
+-fx-border-width:1px;
+}
+
+.sidePanes{
+-fx-background-image: url("blueblur.jpg");
+-fx-border-style:solid;
+-fx-border-color:"gainsboro";
+-fx-border-width:1px;
+}
+
+.toolbars{
+-fx-background-image: url("purpleblur.jpg");
+-fx-border-style:solid;
+-fx-border-color:"gainsboro";
+-fx-border-width:1px;
+}
+
+
+.navigationButtons{
+-fx-border-color:"gainsboro";
+-fx-border-style:solid;
+-fx-border-width:1.5px;
+-fx-alignment:center;
+-fx-text-fill:"white";
+-fx-font-weight:bold;
+-fx-font-style:italic;
+-fx-font-size:15
+}
+#taskManagement{
+-fx-background-color:#29adff;
+}
+#videoPlayer{
+-fx-background-color:#ff6666;
+}
+#fillerButton1{
+-fx-background-color:#4fff72;
+}
+#fillerButton2{
+-fx-background-color:#bb80ff;
 }

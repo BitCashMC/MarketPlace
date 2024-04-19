@@ -65,7 +65,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                org.bitcash.applications.marketplace.marketplace/org.bitcash.applications.marketplace.gui.LoginMain
+                                org.bitcash.applications.marketplace.marketplace/org.bitcash.applications.marketplace.gui.GraphicsMain
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
