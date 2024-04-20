@@ -11,8 +11,11 @@ import org.bitcash.applications.marketplace.backend.login.AccountAuthManager;
 
 import java.io.IOException;
 
-public class LoginController {
+public class LoginPage extends Page {
 
+    public LoginPage() {
+        super("loginpage.css","loginpage.fxml");
+    }
     @FXML
     private AnchorPane background;
 
@@ -54,7 +57,7 @@ public class LoginController {
 
             loginStatus.setTextFill(Color.LIMEGREEN);
             loginStatus.setText("Logged in successfully!");
-            PageManager.switchScene("homepage",null);
+            GraphicalUtilities.switchPage(new HomePage());
         } else {
 
             loginStatus.setTextFill(Color.DARKRED);

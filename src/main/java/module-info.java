@@ -1,4 +1,4 @@
-module org.bitcash.applications.marketplace.marketplace {
+module org.bitcash.applications.marketplace {
     requires javafx.controls;
     requires javafx.fxml;
 

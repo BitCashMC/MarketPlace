@@ -5,17 +5,18 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import org.bitcash.applications.marketplace.backend.Session;
 
 import java.io.IOException;
 
-public class HomeController {
+public class HomePage extends Page {
 
+
+    public HomePage() {
+        super("homepage.css","homepage.fxml");
+    }
     @FXML
     public void initialize() {
-
         accountMenu.setText(Session.getCurrentSession().getAccount().getEmail());
 
     }
@@ -36,7 +37,11 @@ public class HomeController {
     private Button videoPlayer;
 
     public void logOut(ActionEvent e) throws IOException {
-        PageManager.switchScene("loginpage",null);
+        GraphicalUtilities.switchPage(new LoginPage());
+    }
+
+    public void openTaskManagement(ActionEvent e) throws IOException {
+        GraphicalUtilities.switchPage(new TaskManagementPage());
     }
 
 

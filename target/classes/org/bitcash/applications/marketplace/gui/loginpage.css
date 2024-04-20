@@ -1,0 +1,40 @@
+#mainPanel{
+-fx-alignment:center;
+}
+
+
+
+#header{
+-fx-background-image: url("header.png");
+}
+
+#heading{
+-fx-font-size:40;
+-fx-text-fill:"white";
+-fx-font-family: "Arial";
+-fx-font-weight:bold;
+-fx-font-style:italic;
+-fx-alignment:center;
+}
+
+#register{
+-fx-base:#90F8FF;
+}
+
+#login{
+-fx-base:"gold";
+}
+
+#banner{
+-fx-background-color:"yellow";
+}
+
+#login_tile{
+-fx-background-image: url("blueblur.jpg");
+}
+
+.label{
+-fx-text-fill:"white";
+-fx-font-family: "Arial";
+-fx-font-size:15;
+}
